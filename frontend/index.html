@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICP Token Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ICP Token Wallet</h1>
+        <div class="balance-section">
+            <h2>Your Balance</h2>
+            <p id="balance">0 ICP</p>
+            <button onclick="getBalance()">Refresh Balance</button>
+        </div>
+
+        <div class="send-section">
+            <h2>Send Tokens</h2>
+            <form id="sendForm">
+                <label for="recipient">Recipient Address:</label>
+                <input type="text" id="recipient" placeholder="Enter address" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+
+                <button type="submit">Send Tokens</button>
+            </form>
+            <p id="sendStatus"></p>
+        </div>
+
+        <div class="receive-section">
+            <h2>Receive Tokens</h2>
+            <p>Share your address to receive tokens: <span id="userAddress">0xYourAddress</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
